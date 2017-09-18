@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple taBLE</title>
+</head>
+<body>
+
+<table>
+    <tr><th>id</th><th>name</th><th>delete</th></tr>
+
+    <tr id="1"><td>1</td><td>andrew</td><td><button onclick="deleteRow('1')">delete</button> </td></tr>
+    <tr id="2"><td>2</td><td>joe</td><td><button onclick="deleteRow('2')">delete</button> </td></tr>
+    <tr id="3"><td>3</td><td>mary</td><td><button onclick="deleteRow('3')">delete</button> </td></tr>
+    <tr id="4"><td>4</td><td>fred</td><td><button onclick="deleteRow('4')">delete</button> </td></tr>
+</table>
+
+
+<script>
+ function deleteRow(idNumber){
+     console.log("delete row called "+idNumber);
+     var elem =document.getElementById(idNumber);
+     elem.parentNode.removeChild(elem);
+ }
+</script>
+</body>
+</html>
